@@ -43,7 +43,7 @@
         result.messages.forEach(m => {
           console.log(m);
           var li = document.createElement('li');
-          $(li).text(`${m.ruleId}: ${m.message}, ${m.line-1}行目、${m.column -1}文字目「${lines[m.line -1]}」`)
+          $(li).text(`${m.line}行目${m.column}文字目 [${m.ruleId}]: <${m.message}>「${lines[m.line -1]}」`)
           $("#output").append(li);
         })
       })
